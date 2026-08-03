@@ -1,0 +1,126 @@
+
+
+.errorContainer{
+    width: clamp(16rem, calc(10vw + 10rem), 40rem);
+    background-color: rgb(228, 71, 71);
+    color: white;
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    z-index: 8;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.errorContainer.slide-in{
+    -webkit-animation-name: errordialog-slide-in;
+            animation-name: errordialog-slide-in;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.errorContainer.errordialog-slide-out{
+    -webkit-animation-name: errordialog-slide-out;
+            animation-name: errordialog-slide-out;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes errordialog-slide-in {
+    from{
+        right: 20px;
+        bottom: -100px;
+    }
+    to{
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@keyframes errordialog-slide-in {
+    from{
+        right: 20px;
+        bottom: -100px;
+    }
+    to{
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@-webkit-keyframes errordialog-slide-out {
+    from{
+        right: 20px;
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    to{
+        right: -20px;
+        bottom: 20px;
+        opacity: 0;
+    }
+}
+
+@keyframes errordialog-slide-out {
+    from{
+        right: 20px;
+        bottom: 20px;
+        opacity: 1;
+    }
+
+    to{
+        right: -20px;
+        bottom: 20px;
+        opacity: 0;
+    }
+} 
+
+
+
+.errorContainer h2{
+    font-size: clamp(0.8rem, calc(10vw - 5rem), 1.1rem);
+    font-weight: 500;
+    margin: 0 0 0.5em;
+}
+
+.errorContainer p{
+    font-size: clamp(0.6rem, calc(10vw - 5rem), 0.8rem);
+    color: rgb(226, 226, 226);
+    margin: 0;
+}
+.errorContainer:hover button{
+    visibility: visible;
+}
+.errorContainer button{
+    visibility: hidden;
+    position:absolute;
+    top: 5px;
+    right:10px;
+    border: none;
+    background-color: transparent;
+    color: rgb(202, 201, 201);
+
+}
+.errorContainer button:focus{
+    outline: none;
+}
+
+.errorContainer button svg{
+    width: 18px;
+    height: 18px;
+}
+
+

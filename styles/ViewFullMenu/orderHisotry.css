@@ -1,0 +1,155 @@
+.order-history-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 10000;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem;
+}
+.order-history-panel {
+    position: relative;
+    background: #ffffff;
+    color: black;
+    border-radius: 1rem;
+    width: clamp(19rem, calc(100vw - 2rem), 100%);
+    overflow: auto;
+    -webkit-box-shadow: 0 24px 64px rgba(15, 23, 42, 0.25);
+            box-shadow: 0 24px 64px rgba(15, 23, 42, 0.25);
+    padding: 1.5rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.order-history-panel:not(.order-history-card) {
+    height: auto;
+}
+.order-history-panel:has(.order-history-card) {
+    height:min(95vh, 95vh);
+}
+.order-history-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.order-history-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: black;
+}
+.order-history-subtitle {
+    margin: 0.35rem 0 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+.order-history-close {
+    border: none;
+    background: transparent;
+    color: #111827;
+    font-size: 1.75rem;
+    line-height: 1;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+}
+.order-history-list {
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+.order-history-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.85rem;
+    padding: 1rem;
+    background: #f9fafb;
+}
+.order-history-card-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+}
+.order-history-meta,
+.order-history-date {
+    margin: 0;
+    color: #374151;
+    font-size: 0.9rem;
+}
+.order-history-delete {
+    border: none;
+    background: #dc2626;
+    color: #ffffff;
+    border-radius: 0.65rem;
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.order-history-items {
+    margin: 0.65rem 0 0;
+    padding-left: 1.2rem;
+    color: #1f2937;
+}
+.order-history-scroll-top {
+    position: fixed;
+    right: 5rem;
+    bottom: 130px;
+    border: none;
+    background:transparent;
+    color: rgb(101, 100, 100);
+    padding: 0.65rem 0.95rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 3rem;
+    opacity: 0;
+    outline: none;
+    -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+            transform: translateY(10px);
+    -webkit-transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+    transition: opacity 0.25s ease, -webkit-transform 0.25s ease;
+    -o-transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease, -webkit-transform 0.25s ease;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1;
+}
+.order-history-scroll-top.visible {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+.order-history-empty {
+    margin: 0;
+    color: #4b5563;
+    text-align: center;
+    font-size: 1rem;
+}

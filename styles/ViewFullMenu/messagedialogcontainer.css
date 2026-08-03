@@ -1,0 +1,97 @@
+
+
+.dialog-container{
+    height: 100px;
+    padding: 0 1rem;
+    border: 1px solid rgba(240, 185, 83, 0.086);
+    border-radius: 10px;
+    background-color: rgba(20, 6, 1, 0.912);
+    -ms-flex-line-pack: center;
+        align-content: center;
+    position: absolute;
+    top:10px;
+    left: 10px;
+    right: 25px;
+    z-index: 7;
+    -webkit-animation-name: slide-in;
+            animation-name: slide-in;
+    -webkit-animation-timing-function:ease;
+            animation-timing-function:ease;
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.dialog-container:hover > .remove-dialog-btn svg{
+    color: white;
+    
+}
+
+.dialog-container .remove-dialog-btn{
+    color: rgba(255, 255, 255, 0.43);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.dialog-container .remove-dialog-btn svg{
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+@-webkit-keyframes slide-in {
+    from{
+        top:-100px;
+        opacity: 0;
+    }
+    to{
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from{
+        top:-100px;
+        opacity: 0;
+    }
+    to{
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-out {
+    from{
+        left: 15px;
+        opacity: 1;
+    }
+    to{
+        left: 500px;
+        opacity: 0;
+    }
+    
+}
+
+@keyframes slide-out {
+    from{
+        left: 15px;
+        opacity: 1;
+    }
+    to{
+        left: 500px;
+        opacity: 0;
+    }
+    
+}

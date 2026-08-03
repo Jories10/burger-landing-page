@@ -1,0 +1,229 @@
+
+
+/* ===================================
+   Form Styles & Input Components
+   =================================== */
+
+/* ===== Form Container ===== */
+.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.427);
+    -webkit-backdrop-filter: 10px;
+    backdrop-filter: 10px;
+    z-index: 8;
+}
+
+/* ===== Form Group ===== */
+.form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Labels ===== */
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(245, 245, 245, 0.91);
+    letter-spacing: 0.5px;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #ff6b35;
+}
+
+/* Required Field Indicator */
+label [aria-label="required"] {
+    color: #ff6b35;
+    margin-left: 0.25rem;
+}
+
+/* ===== Input Fields ===== */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(245, 245, 245, 0.91);
+    font-family: inherit;
+    font-size: 1rem;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: rgba(245, 245, 245, 0.5);
+}
+
+input[type="text"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
+    color: rgba(245, 245, 245, 0.5);
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: rgba(245, 245, 245, 0.5);
+}
+
+input[type="text"]::-ms-input-placeholder, input[type="tel"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    color: rgba(245, 245, 245, 0.5);
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+textarea::placeholder {
+    color: rgba(245, 245, 245, 0.5);
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff6b35;
+    background-color: rgba(255, 255, 255, 0.08);
+    -webkit-box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* ===== Form Buttons ===== */
+button.gradient-btn {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background: -o-linear-gradient(300deg, rgb(214, 89, 12), rgb(255, 198, 106));
+    background: linear-gradient(150deg, rgb(214, 89, 12), rgb(255, 198, 106));
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+button.gradient-btn:hover,
+button.gradient-btn:focus {
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+button.gradient-btn:active {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+}
+
+/* ===== Form Validation States ===== */
+input:invalid:not(:-moz-placeholder-shown), textarea:invalid:not(:-moz-placeholder-shown) {
+    border-color: #e74c3c;
+}
+input:invalid:not(:-ms-input-placeholder), textarea:invalid:not(:-ms-input-placeholder) {
+    border-color: #e74c3c;
+}
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+input:valid:not(:-moz-placeholder-shown), textarea:valid:not(:-moz-placeholder-shown) {
+    border-color: #2ecc71;
+}
+
+input:valid:not(:-ms-input-placeholder), textarea:valid:not(:-ms-input-placeholder) {
+    border-color: #2ecc71;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown) {
+    border-color: #2ecc71;
+}
+
+/* ===== Error Messages ===== */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+}
+
+.error-message::before {
+    content: "⚠";
+    font-size: 1rem;
+}
+
+/* ===== Success Messages ===== */
+.success-message {
+    color: #2ecc71;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+}
+
+.success-message::before {
+    content: "✓";
+    font-size: 1rem;
+}
+
+/* ===== Field Descriptions ===== */
+.field-description {
+    font-size: 0.875rem;
+    color: rgba(245, 245, 245, 0.70);
+    margin-top: 0.25rem;
+    line-height: 1.4;
+}
+
+/* ===== Responsive Forms ===== */
+@media screen and (max-width: 640px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}

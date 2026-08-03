@@ -1,0 +1,420 @@
+
+/* ===================================
+   Header & Navigation Styles
+   =================================== */
+
+:root {
+    --button-gradient: linear-gradient(150deg, rgb(214, 89, 12), rgb(255, 198, 106));
+    --navbar-links-color: rgba(255, 255, 255, 0.886);
+    --header-height: 4.4rem;
+    --header-bg: rgba(0, 0, 0, 0.4);
+    --button-width: 10rem;
+    --button-height: 4.1rem;
+    --button-radius: 40px;
+    --mobile-breakpoint: 800px;
+}
+
+/* ===== Header Layout ===== */
+header {
+    width: 100vw;
+    height: var(--header-height);
+    background-color: var(--header-bg);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(244, 173, 115, 0.14);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+/* ===== Logo & Branding ===== */
+.header-branding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 100%;
+    width: 10.4rem;
+    margin-left: calc(5vw + 1rem);
+}
+
+
+
+.shopping-bag-icon {
+    background: var(--button-gradient);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.4rem;
+}
+
+.shopping-bag-icon svg {
+    display: inline-block;
+    width: 1.3rem;
+    color: var(--navbar-links-color);
+    font-weight: 600;
+}
+
+header h1 {
+    background: var(--button-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* ===== Main Navigation ===== */
+#main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 2rem;
+}
+
+#main-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+
+#main-nav ul li {
+    margin: 0 1rem;
+}
+
+#main-nav ul li a {
+    outline: none;
+    text-decoration: none;
+    color: var(--navbar-links-color);
+    -webkit-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus {
+    color: #ff6b35;
+}
+
+#main-nav > button:last-child {
+    width: var(--button-width);
+    height: var(--button-height);
+    border-radius: var(--button-radius);
+    background: var(--button-gradient);
+    border: none;
+    color: var(--navbar-links-color);
+    font-size: 1.2rem;
+    margin-left: 3rem;
+    -webkit-transition: -webkit-transform 0.8s ease;
+    transition: -webkit-transform 0.8s ease;
+    -o-transition: transform 0.8s ease;
+    transition: transform 0.8s ease;
+    transition: transform 0.8s ease, -webkit-transform 0.8s ease;
+    cursor: pointer;
+    font-weight: 600;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#main-nav > button:last-child:hover,
+#main-nav > button:last-child:focus {
+    cursor: pointer;
+    scale: 1.1;
+    -webkit-box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* Order History Button - Plain Text Style */
+#order-history-button {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: none;
+    border: none;
+    color: var(--navbar-links-color);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 0;
+    -webkit-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+    cursor: pointer;
+    padding: 0;
+    scale: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+#order-history-button:hover,
+#order-history-button:focus {
+    color: #ff6b35;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+/* ===== Mobile Navigation ===== */
+#responsive-nav {
+    display: none;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 0 1rem;
+    -webkit-animation-name: nav-slide-up;
+            animation-name: nav-slide-up;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+}
+
+#responsive-nav ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#responsive-nav ul li {
+    margin: 1.4rem 0;
+}
+
+#responsive-nav ul li a {
+    text-decoration: none;
+    color: var(--navbar-links-color);
+    font-size: 1.2rem;
+    -webkit-transition: color 0.5s linear;
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+    font-weight: 500;
+}
+
+#responsive-nav ul li a:hover,
+#responsive-nav ul li a:focus {
+    color: #ff6b35;
+}
+
+#responsive-nav button {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    margin-top: 1rem;
+    color: var(--navbar-links-color);
+    background: var(--button-gradient);
+    border: none;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#responsive-nav button:hover,
+#responsive-nav button:focus {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+}
+
+/* ===== Hamburger Menu Toggle ===== */
+.menu-toggle {
+    display: none;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid whitesmoke;
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+.menu-toggle input {
+    display: none;
+}
+
+.hamburger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.793);
+    width: 15px;
+    height: 2px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu span:nth-child(2) {
+    margin: 2px 0;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle input:checked + .hamburger-menu span:nth-child(1) {
+    -webkit-transform: rotate(46deg) translate(3px, 2px);
+        -ms-transform: rotate(46deg) translate(3px, 2px);
+            transform: rotate(46deg) translate(3px, 2px);
+}
+
+.menu-toggle input:checked + .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle input:checked + .hamburger-menu span:nth-child(3) {
+    -webkit-transform: rotate(-46deg) translate(3px, -3px);
+        -ms-transform: rotate(-46deg) translate(3px, -3px);
+            transform: rotate(-46deg) translate(3px, -3px);
+}
+
+.menu-toggle input:checked ~ #responsive-nav {
+    display: block;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 867px) {
+    #main-nav {
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 867px) {
+    #main-nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    
+}
+
+/* ===== Animations ===== */
+@-webkit-keyframes nav-slide-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(60px);
+                transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@keyframes nav-slide-up {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(60px);
+                transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    @-webkit-keyframes nav-slide-up {
+        from {
+            opacity: 1;
+            -webkit-transform: none;
+                    transform: none;
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+                    transform: none;
+        }
+    }
+    @keyframes nav-slide-up {
+        from {
+            opacity: 1;
+            -webkit-transform: none;
+                    transform: none;
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+                    transform: none;
+        }
+    }
+    
+    .shopping-bag-icon,
+    #main-nav button,
+    #responsive-nav button,
+    .hamburger-menu span {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+}

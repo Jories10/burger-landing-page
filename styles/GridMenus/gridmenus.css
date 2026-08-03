@@ -1,0 +1,135 @@
+
+
+.message-dialog{
+    width: clamp(18rem, calc(40vw + 5rem),27rem);
+    height: auto;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter:50px;
+    backdrop-filter: 50px;
+    border: 1px solid rgba(238, 166, 103, 0.258);
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 5;
+    -webkit-animation-name: dialog-slide-in;
+            animation-name: dialog-slide-in;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes dialog-slide-in{
+    from{
+        bottom:-100px;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+    
+}
+
+@keyframes dialog-slide-in{
+    from{
+        bottom:-100px;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+    
+}
+.message-dialog.dialog-slide-out{
+    -webkit-animation-name: dialog-slide-out;
+            animation-name: dialog-slide-out;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+
+}
+@-webkit-keyframes dialog-slide-out {
+    from{
+        right: 30px;
+        opacity: 1;
+    }
+    to{
+        right: -500px;
+        opacity: 0;
+    }
+}
+@keyframes dialog-slide-out {
+    from{
+        right: 30px;
+        opacity: 1;
+    }
+    to{
+        right: -500px;
+        opacity: 0;
+    }
+}
+.message-dialog h3{
+    font-size: 1rem;
+    margin: 0;
+}
+.message-dialog p{
+    margin: 0;
+    margin-top: 0.5rem;
+    color: rgb(219, 219, 219);
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.message-dialog button{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    opacity: 0;
+    cursor: pointer;
+    -webkit-transition: opacity ease 1s;
+    -o-transition: opacity ease 1s;
+    transition: opacity ease 1s;
+}
+.message-dialog:hover button{
+    opacity: 1;
+}
+
+.message-dialog button:active{
+    scale: 1.2;
+    -webkit-transition: scale 10ms linear;
+    -o-transition: scale 10ms linear;
+    transition: scale 10ms linear;
+}
+.message-dialog button svg{
+    width: 15px;
+    height: 15px;
+}
+
+@media  screen and (max-width:500px) {
+    .message-dialog button{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,214 @@
+
+
+:root{
+    --gradient-button-color:linear-gradient(to right, rgb(196, 81, 9),rgb(246, 200, 126));
+    --header-span-color:linear-gradient(to right, rgb(236, 107, 26),rgb(251, 189, 89));
+    --gradient-header-color:linear-gradient(120deg, rgb(235, 122, 51),rgb(248, 194, 108));
+}
+#footer{
+    width: 100%;
+    padding: 0 2rem 4rem;
+    border-top: 1px solid rgba(243, 139, 74, 0.2);
+}
+
+#footer .footer-content{
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 4rem 0 4rem;
+    gap: 3rem;
+}
+#footer .footer-content .services-detail .burger-title{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+#footer .footer-content .services-detail .burger-title .shopping-bag-wrapper{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:var(--gradient-header-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+}
+#footer .footer-content .services-detail .burger-title h2{
+    margin: 0;
+    margin-left: 0.8rem;
+    background: var(--header-span-color);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+#footer .footer-content .content{
+    width: clamp(10rem, calc(19vw + 1.2rem), 30rem);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 16rem;
+        flex-basis: 16rem;
+
+}
+
+
+
+
+#footer .footer-content .services-detail .detail p{
+    margin: 0;
+    margin-top: 1.7rem;
+    color: rgb(191, 191, 191);
+    line-height: 1.6rem;
+    font-size: 1rem;
+}
+
+#footer .footer-content .services-detail .social-media-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 2rem;
+}
+#footer .footer-content .services-detail .social-media-container .social-media{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 68, 0, 0.201);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 50%;
+}
+#footer .footer-content .services-detail .social-media-container .social-media:nth-child(2){
+    margin-left: 1rem;
+}
+#footer .footer-content .services-detail .social-media-container .social-media:nth-child(3){
+    margin-left: 1rem;
+}
+
+#footer .footer-content .quick-links  h2{
+    margin:0;
+    font-size: 1.2rem;
+}
+
+#footer .footer-content .quick-links ul{
+    list-style: none;
+    margin-top: 2rem;
+    text-align: left;
+    padding: 0;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+#footer .footer-content .quick-links ul li{
+    margin-top: 1rem;
+}
+
+#footer .footer-content .quick-links ul li a{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+
+#footer .footer-content .contact .info{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+#footer .footer-content .contact .info div svg{
+    color: rgb(243, 82, 23);
+    margin-top: 0.1rem;
+    width: 20px;
+    height: 20px;
+}
+
+#footer .footer-content .contact .info p{
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(179, 178, 178);
+}
+
+#footer .footer-content .contact .info:last-child {
+    display: block;
+    margin-top: 2rem;
+    row-gap: 4rem;
+}
+
+#footer .footer-content .contact .hours div.available-date-time{
+    padding-top: 1rem;
+}
+#footer .footer-content .contact .hours .available-date-time p{
+    line-height: none;
+    margin-top: 0.4rem;
+}
+#footer .footer-content .contact .hours .available-date-time p:first-child{
+    margin: 0;
+}
+
+#footer .terms-condition{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top:calc(3vw + 1rem);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+#footer .terms-condition p{
+    margin: 0;
+}
+#footer .terms-condition ul{
+    width: 15rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#footer .terms-condition ul li a{
+    color: rgb(196, 196, 196);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    #footer .terms-condition{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        row-gap: 1.5rem;
+    }
+}
+

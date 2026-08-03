@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BurgerCraft - Build Your Perfect Burger</title>
+        <!-- Favicon for BurgerCraft restaurant -->
+        <link rel="shortcut icon" href="./images/classic-burger.jpg" type="image/x-icon">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <!-- Core Styles -->
+        <link rel="stylesheet" href="./styles/normalize.css">
+        <link rel="stylesheet" href="./styles/general.css">        
+        <link rel="stylesheet" href="./styles/utilities.css">        
+        <link rel="stylesheet" href="./styles/header.css">
+        <link rel="stylesheet" href="./styles/main.css">
+        
+        <!-- Section Styles -->
+        <link rel="stylesheet" href="./styles/hero-section.css">
+        <link rel="stylesheet" href="./styles/how_it_works.css">
+        <link rel="stylesheet" href="./styles/menu.css">
+        <link rel="stylesheet" href="./styles/feedback-ratings.css">
+        <link rel="stylesheet" href="./styles/footer.css">
+        
+        <!-- Component & Form Styles -->
+        <link rel="stylesheet" href="./styles/forms.css">
+        <link rel="stylesheet" href="./styles/OrderNowForm/orderNowForm.css">
+        <link rel="stylesheet" href="./styles/OrderNowForm/errorDialog.css">
+        <link rel="stylesheet" href="./styles/OrderNowForm/placeOrder.css">
+        <link rel="stylesheet" href="./styles/ViewFullMenu/messagedialogcontainer.css">
+        <link rel="stylesheet" href="./styles/GridMenus/gridmenus.css">
+        <link rel="stylesheet" href="./styles/ViewFullMenu/orderHisotry.css">
+    </head>
+    <body class="body">
+
+        <header role="banner">
+            <div class="header-branding">
+                <div class="shopping-bag-icon" aria-label="BurgerCraft logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-5 h-5 text-white" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <h1>BurgerCraft</h1>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav id="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#feedback-ratings">Reviews</a></li>
+                </ul>
+                <button type="button" id="order-history-button" aria-label="View order history">Order History</button>
+                <button type="button" id="wide-screen-order-button" aria-label="Open order form">Order Now</button>
+            </nav>
+            <!-- Mobile Navigation Toggle -->
+            <div class="menu-toggle">
+                <input type="checkbox" id="show-navbar" aria-label="Toggle mobile menu">
+                <label for="show-navbar" class="hamburger-menu" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <!-- Mobile Navigation -->
+                <nav id="responsive-nav" aria-label="Mobile navigation">
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><a href="#feedback-ratings">Reviews</a></li>
+                    </ul>
+                    <button type="button" id="order-history-mobile-button" aria-label="View order history">Order History</button>
+                    <button type="button" id="order-now" aria-label="Open order form on mobile">Order Now</button>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" role="main">
+            <!-- Hero Section: Call to Action -->
+            <section id="hero-section" aria-labelledby="hero-title"> 
+                    <div class="hero-img-bg"></div>           
+                    <div class="content-container">
+                        <div class="hero-intro">
+                            <h2 id="hero-title">Build the <span>Burger</span> You Crave</h2>
+                            <p>Fresh ingredients, fast delivery, and a burger made your way.</p>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" id="order-now-btn" aria-label="Open order form to place an order">
+                                Order Now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 w-5 h-5" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                            </button>
+                            <a href="#how-it-works" id="how-it-works-btn" aria-label="Learn how our ordering process works">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play mr-2 w-5 h-5" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+                                How it Works
+                            </a>
+                        </div>
+
+                        <div class="satisfaction-guarantee">
+                            <ul>
+                                <li>Fresh Daily</li>
+                                <li>30min delivery</li>
+                                <li>100% satisfaction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="floating-image-container">
+                            <div class="floating-image">
+                                <img src="./images/floating-burger.jpg" alt="floating burger">
+                            </div>
+                    </div>
+                    <div class="order-now-form">
+                            <div class="form-container">
+                                <div class="order-detail">
+                                    <h2>Place Your Order</h2>
+                                    <p>Fill in your details and we'll deliver your burger fresh and hot!</p>
+                                    <button type="button" id="exit" aria-label="Close order form" title="Close order form">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                                    </button>
+                                </div>
+                                <form id="order-form" aria-label="Order information form" novalidate>
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name <span aria-label="required">*</span></label>
+                                        <input type="text" id="full-name" name="full-name" placeholder="John Doe" required aria-required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone-number">Phone Number <span aria-label="required">*</span></label>
+                                        <input type="tel" id="phone-number" name="phone-number" placeholder="+63 9XX XXX XXXX" required aria-required="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="delivery-address">Delivery Address <span aria-label="required">*</span></label>
+                                        <input type="text" id="delivery-address" name="delivery-address" placeholder="Street address and unit number" required aria-required="true">
+                                    </div>
+                                    <button type="submit" id="confirm-order" aria-label="Submit order with provided information">Confirm Order</button>
+                                </form>
+                            </div>
+                    </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section id="how-it-works" aria-labelledby="how-it-works-title">
+                <div class="instruction-and-services">
+                    <div class="service-title">
+                        <h2 id="how-it-works-title">How it <span>Works</span></h2>
+                            <p>From fresh ingredients to fast delivery, we've perfected every step of the burger experience.</p>
+                        </div>
+                        <div class="detail-of-services">
+                            <div class="fresh-ingredients service">
+                                <div class="shef-logo logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chef-hat w-8 h-8 text-white"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"></path><path d="M6 17h12"></path></svg>
+                                </div>
+                                <div class="fresh-ingredients-title title">
+                                    <h3>Fresh Ingredients</h3>
+                                    <p>Locally sourced and cooked to perfection.</p>
+                                </div>
+                            </div>
+                            <div class="build-and-save service">
+                                <div class="clock-wrapper-logo logo" aria-label="Build and save feature">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock w-8 h-8 text-white" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                </div>
+                                <div class="build-and-save-title title">
+                                    <h3>Build & Save</h3>
+                                    <p>Customize your burger and save your favorites.</p>
+                                </div>
+                            </div>
+                            <div class="live-tracking service">
+                                <div class="live-tracking-logo logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck w-8 h-8 text-white"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+                                </div>
+                                <div class="liver-tracking-title title">
+                                    <h3>Live Tracking</h3>
+                                    <p>Track your order from kitchen to your door.</p>
+                                </div>
+                            </div>
+                            <div class="guaranteed-quality-services service">
+                               <div class="shield-logo logo">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8 text-white"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                               </div>
+                               <div class="quality-title title">
+                                    <h3>Quality Promise</h3>
+                                    <p>100% satisfaction guarantee or your money back.</p>
+                               </div>
+                            </div>
+                            <div class="service"></div>
+                            <div class="service"></div>
+                        </div>
+                        <div class="order-processes">
+                            <h2>Simple 3-step Process</h2>
+                            <div class="steps">
+                                <div class="step-1 step">
+                                    <div class="progress">
+                                        <h3>1</h3>
+                                    </div>
+                                    <h4>Choose & Customize</h4>
+                                    <p>Pick your base burger and add your favorite toppings</p>
+                                </div>
+                                <div class="empty"></div>
+                                <div class="step-2 step">
+                                    <div class="progress">
+                                        <h3>2</h3>
+                                    </div>
+                                    <h4>Order & Pay</h4>
+                                    <p>Secure checkout with multiple payment options</p>
+                                </div>
+                                <div class="empty"></div>
+                                <div class="step-3 step">
+                                    <div class="progress">
+                                        <h3>3</h3>
+                                    </div>
+                                    <h4>Enjoy Fresh</h4>
+                                    <p>Hot delivery to your door in 30 minutes or less</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Menu Section -->
+            <section id="menu" aria-labelledby="menu-title">
+                <h2 id="menu-title">Featured <span>Menu</span></h2>
+                    <p>Handcrafted burgers made with premium ingredients and served with passion.</p>
+
+                    <div class="grid-menus">
+                        <div class="classic-burger burger">
+                            <div class="classic-burger-image burger-img">
+                                <img src="./images/burger-classic-HPwUwQJJ.jpg" alt="The Classic - Lettuce, tomato, American cheese, special sauce" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="burger-details">
+                                <div class="classic-burger-content">
+                                    <h3 class="burger-title">The Classic</h3>
+                                    <p>Lettuce, tomato, American cheese, special sauce</p>
+                                </div>
+                                <div class="price">
+                                    <h4 class="burger-price">₱199</h4>
+                                    <button type="button" class="add-product">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bacon-deluxe burger">
+                            <div class="bacon-deluxe-img burger-img">
+                                <img src="./images/burger-bacon-CIGQz76i.jpg" alt="Bacon deluxe image">
+                            </div>
+                            <div class="burger-details">
+                                <div class="bacon-deluxe-content">
+                                    <h3 class="burger-title">Bacon Deluxe</h3>
+                                    <p>Crispy bacon, cheddar cheese, caramelized onions</p>
+                                </div>
+                                <div class="price">
+                                    <h4 class="burger-price">₱299</h4>
+                                    <button type="button" class="add-product">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spicy-heat burger">
+                            <div class="spicy-heat-img burger-img">
+                                <img src="./images/burger-spicy-BPFRl66q.jpg" alt="Spicy heat burger">
+                            </div>
+                            <div class="burger-details">
+                                <div class="spicy-heat-content">
+                                    <h3 class="burger-title">Spicy Heat</h3>
+                                    <p>Jalapeños, pepper jack, chipotle mayo, hot sauce</p>
+                                </div>
+                                <div class="price">
+                                    <h4 class="burger-price">₱249</h4>
+                                    <button type="button" class="add-product">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="garden-fresh burger">
+                            <div class="garden-fresh-img burger-img">
+                                <img src="./images/burger-veggie-D9yfx8px.jpg" alt="Garden fresh img">
+                            </div>
+                            <div class="burger-details">
+                                <div class="garden-fresh-content">
+                                    <h3 class="burger-title">Garden Fresh</h3>
+                                    <p>Black bean patty, avocado, sprouts, herb aioli</p>
+                                </div>
+                                <div class="price">
+                                    <h4 class="burger-price">₱229</h4>
+                                    <button type="button" class="add-product">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="burger empty"></div>
+                        <div class="burger empty"></div>
+                    </div>
+                    <div class="full-menu-container">
+                        <div class="full-menu">
+                            <button id="mobile-exit-button" type="button" aria-label="mobile exit button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-4 w-4" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                            </button>
+                            <div class="title-description">
+                                <h2>Full Menu</h2>
+                                <p>Browse our burgers and add to your order</p>
+                            </div>
+                            <div class="menus">
+                                <div class="classic full-menu-item">
+                                    <div class="classic-img item-img-container">
+                                        <img class="Classic-burger-img" src="./images/burger-classic-HPwUwQJJ.jpg" alt="Burger Classic Image">
+                                    </div>
+                                    <div class="classic-burger-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3 class="burger-name">The Classic</h3>
+                                            <p class="rate">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.8
+                                            </p>
+                                        </div>
+                                        <p>Lettuce, tomato, American cheese, special sauce</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱199</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bacon-deluxe full-menu-item">
+                                    <div class="bacon-deluxe-img item-img-container">
+                                        <img src="./images/burger-bacon-CIGQz76i.jpg" alt="Bacon Deluxe Image">
+                                    </div>
+                                    <div class="bacon-deluxe-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">Bacon Deluxe </h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.9
+                                            </p>
+                                        </div>
+                                        <p>Crispy bacon, cheddar cheese, caramelized onions</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱299</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="spicy-heat full-menu-item">
+                                    <div class="spicy-heat-img item-img-container">
+                                        <img src="./images/burger-spicy-BPFRl66q.jpg" alt="Spicy Heat Image">
+                                    </div>
+                                    <div class="spicy-heat-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">Spicy Heat </h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.7
+                                            </p>
+                                        </div>
+                                        <p>Jalapeños, pepper jack, chipotle mayo, hot sauce</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱249</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="garden-fresh full-menu-item">
+                                    <div class="garden-fresh-img item-img-container">
+                                        <img src="./images/garden-fresh.webp" alt="Garden Fresh Image">
+                                    </div>
+                                    <div class="garden-fresh-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">Garden Fresh </h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.6
+                                            </p>
+                                        </div>
+                                        <p>Black bean patty, avocado, sprouts, herb aioli</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱229</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="double-stack full-menu-item">
+                                    <div class="double-stack-img item-img-container">
+                                        <img src="./images/burger-classic-HPwUwQJJ.jpg" alt="Double Stack Image">
+                                    </div>
+                                    <div class="double-stack-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">Double Stack</h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.8
+                                            </p>
+                                        </div>
+                                        <p>Two beef patties, double cheese, pickles, mustard</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱349</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bbq-rancher full-menu-item">
+                                    <div class="bbq-rancher-img item-img-container">
+                                        <img src="./images/burger-bacon-CIGQz76i.jpg" alt="BBQ Rancher Image">
+                                    </div>
+                                    <div class="bbq-rancher-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">BBQ Rancher</h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.7
+                                            </p>
+                                        </div>
+                                        <p>Smoky BBQ sauce, ranch, onion rings, bacon</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱279</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mushroom-swiss full-menu-item">
+                                    <div class="mushroom-swiss-img item-img-container">
+                                        <img src="./images/burger-veggie-D9yfx8px.jpg" alt="Mushroom Swiss burger image - sautéed mushrooms, Swiss cheese, garlic aioli">
+                                    </div>
+                                    <div class="mushroom-swiss-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3  class="burger-name">Mushroom Swiss</h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.5
+                                            </p>
+                                        </div>
+                                        <p>Sautéed mushrooms, Swiss cheese, garlic aioli</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱259</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inferno full-menu-item">
+                                    <div class="inferno-img item-img-container">
+                                        <img src="./images/burger-spicy-BPFRl66q.jpg" alt="Inferno burger image - ghost pepper sauce, habanero relish, pepper jack cheese">
+                                    </div>
+                                    <div class="inferno-content full-menu-item-content">
+                                        <div class="title-ratings">
+                                            <h3 class="burger-name">Inferno</h3>
+                                            <p>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-3 h-3 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                                                </svg>
+                                                4.6
+                                            </p>
+                                        </div>
+                                        <p>Ghost pepper sauce, habanero relish, pepper jack</p>
+                                        <div class="add-to-cart">
+                                            <h4 class="price">₱269</h4>
+                                            <button type="button" class="add-item">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-btn-container">
+                                <button type="button" id="checkout">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag mr-2 w-5 h-5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    Checkout
+                                    <span id="items">(1 items)</span>
+                                    <span class="line">---</span>
+                                    <span id="total-cost">249</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="view-full-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag mr-2 w-5 h-5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        Order Now
+                    </button>
+                </section>
+
+            <!-- Customer Reviews Section -->
+            <section id="feedback-ratings" aria-labelledby="reviews-title">
+                <div class="ratings-header">
+                    <h2 id="reviews-title">What Our <span>Customers</span> Say</h2>
+                        <p>Don't just take our word for it. Here's what real customers think about their BurgerCraft experience.</p>
+                    </div>
+                    <div class="feedback-grid">
+                        <div class="maria-feedback feedback-container">
+                            <h3 class="quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                            </h3>
+                            <div class="stars">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <div class="feedback">
+                                <p>"Absolutely amazing! The build-your-own burger feature lets me create exactly what I want. Fresh ingredients and lightning-fast delivery."</p>
+                            </div>
+                            <div class="maria-santos name">
+                                <h2>MS</h2>
+                                <div>
+                                    <h3>Maria Santos</h3>
+                                    <h4>Food Vlogger</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="john-feedback feedback-container">
+                            <h3 class="quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                            </h3>
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <div class="feedback">
+                                <p>"Best burgers in the city! The quality is consistent and the app makes ordering so easy. My go-to for weekend treats."</p>
+                            </div>
+                            <div class="jogn-rivera name">
+                                <h2>JR</h2>
+                                <div>
+                                    <h3>John Rivera</h3>
+                                     <h4>Regular Customer</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sofia-feedback feedback-container">
+                            <h3 class="quote">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-quote w-6 h-6 text-white"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path></svg>
+                            </h3>
+                            <div class="stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 fill-yellow-accent text-yellow-accent"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg>
+                            </div>
+                            <div class="feedback">
+                                <p>"Perfect for my lunch breaks. 30-minute guarantee is real, and the food always arrives hot and fresh. Highly recommend!"</p>
+                            </div>
+                            <div class="sofia-chen name">
+                                <h2>SC</h2>
+                                <div>
+                                     <h3>Sofia Chen</h3>
+                                     <h4>Busy Professional</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-container empty"></div>
+                    </div>
+                    <div class="customer-ratings-satisfaction">
+                        <div class="happy-customer customer">
+                            <h2>5000+</h2>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="average-rating customer">
+                            <h2>4.9★</h2>
+                            <p>average rating</p>
+                        </div>
+                        <div class="delivery-duration customer">
+                            <h2>30min</h2>
+                            <p>Delivery Time</p>
+                        </div>
+                        <div class="satisfaction customer">
+                            <h2>100%</h2>
+                            <p>Satisfaction</p>
+                        </div>
+                    </div>
+                </section>
+        </main>
+        <!-- Website Footer -->
+        <footer id="footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="services-detail content">
+                    <div class="burger-title">
+                        <div class="shopping-bag-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag w-6 h-6 text-white"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                        </div>
+                        <h2>Burger Craft</h2>
+                    </div>
+                    <div class="detail">
+                        <p>Crafting the perfect burger experience with fresh ingredients, fast delivery, and flavors that make every bite unforgettable.</p>
+                    </div>
+                    <div class="social-media-container">
+                        <div class="facebook social-media">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </div>
+                        <div class="instagram social-media">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        </div>
+                        <div class="twitter social-media">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter w-5 h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-links content">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><a href="#feedback-ratings">Reviews</a></li>
+                        <li><a href="#">Download App</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div class="quick-links support content">
+                    <h2>Support</h2>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class=" quick-links contact content" >
+                    <h2>Contact</h2>
+                    <div class="location info">
+                         <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin w-5 h-5 text-primary mt-0.5 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg> 
+                         </div>
+                        <p>
+                            123 Burger Street Food District, Metro Manila
+                        </p>
+                    </div>
+                    <div class="phone-number info">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-5 h-5 text-primary shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <p>
+                            +63 917 123 4567
+                        </p>
+                    </div>
+                    <div class="email info">
+                       <div>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5 text-primary shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                       </div>
+                        <p>
+                            hello@burgercraft.ph
+                        </p>
+                    </div>
+                    <div class="hours info">
+                        <h2>Hours</h2>
+                        <div class="available-date-time">
+                            <p>Mon - Thu: 11AM - 10PM</p>
+                            <p>Fri - Sat: 11AM - 11PM</p>
+                            <p>Sunday: 12PM - 9PM</p>mic
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terms-condition">
+                <p>© 2024 BurgerCraft. All rights reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- Main application script -->
+        <script src="./script/HeaderOrderForm/orderNowForm.js" type="module" defer></script>
+    </body>
+</html>
+</html>

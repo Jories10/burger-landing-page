@@ -1,0 +1,254 @@
+
+
+:root{
+    --buttons-color:linear-gradient(150deg, rgb(214, 89, 12),rgb(255, 198, 106));
+    --navbar-links-color: rgba(255, 255, 255, 0.886);
+}
+
+#how-it-works{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    padding: 6rem 0;
+    
+}
+#how-it-works .instruction-and-services{
+    width: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+#how-it-works .instruction-and-services .service-title {
+   width: 100%;
+   height: auto;
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+#how-it-works .instruction-and-services .service-title h2{
+   font-size: clamp(1rem, calc(2vw + 2rem), 5rem);
+   font-weight: 800;
+   margin: 0;
+   margin-bottom: 1.3rem;
+}
+#how-it-works .instruction-and-services .service-title h2 span{
+    background: var(--buttons-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#how-it-works .instruction-and-services .service-title p{
+    width:clamp(10rem, calc(55vw + 5rem), 100%);
+    font-size: clamp(1rem, calc(1vw + 0.8rem), 3.5rem);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.644);
+    margin: auto ;
+}
+
+#how-it-works .instruction-and-services .detail-of-services{
+    width: 100%;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 3rem;
+       -moz-column-gap: 3rem;
+            column-gap: 3rem;
+    padding: 0 2rem 0;
+    row-gap: 2rem;
+    -webkit-transition: border, 'box-shadow' 50ms ease-in-out, 'box-shadow' 50ms ease-in-out;
+    transition: border, 'box-shadow' 50ms ease-in-out, 'box-shadow' 50ms ease-in-out;
+    -o-transition: border, 'box-shadow' 50ms ease-in-out, 'box-shadow' 50ms ease-in-out;
+    transition: border, 'box-shadow' 50ms ease-in-out;
+}
+#how-it-works .instruction-and-services .detail-of-services .service{
+    
+   display: -webkit-box;
+    
+   display: -ms-flexbox;
+    
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   padding: 2rem;
+   border-radius: 20px;
+   background-color: rgba(250, 177, 132, 0.219);
+   border: 1px solid transparent;
+   -ms-flex-preferred-size: 13rem;
+       flex-basis: 13rem;
+   -ms-flex-negative: 8rem;
+       flex-shrink: 8rem;
+   -webkit-box-flex: 1;
+       -ms-flex-positive: 1;
+           flex-grow: 1;
+}
+#how-it-works .instruction-and-services .detail-of-services .service:nth-child(5),
+#how-it-works .instruction-and-services .detail-of-services .service:nth-child(6){
+    opacity: 0;
+
+}
+@media screen and (max-width: 800px){
+    #how-it-works .instruction-and-services .detail-of-services .service:nth-child(5),
+    #how-it-works .instruction-and-services .detail-of-services .service:nth-child(6){
+    display: none;
+    }
+    
+}
+@media screen and (min-width: 1055px){
+    #how-it-works .instruction-and-services .detail-of-services .service:nth-child(5),
+    #how-it-works .instruction-and-services .detail-of-services .service:nth-child(6){
+    display: none;
+    }
+}
+#how-it-works .instruction-and-services .detail-of-services .service:hover{
+    border: 1px solid rgba(242, 98, 9, 0.645);
+    -webkit-box-shadow: 0 5px 10px 10px rgba(211, 89, 8, 0.188);
+            box-shadow: 0 5px 10px 10px rgba(211, 89, 8, 0.188);
+}
+
+#how-it-works .instruction-and-services .detail-of-services .service .logo{
+    background: var(--buttons-color);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#how-it-works .instruction-and-services .detail-of-services .service .logo svg{
+    width: 30px;
+    height: 30px;
+}
+#how-it-works .instruction-and-services .detail-of-services .service .title{
+    text-align: center;
+}
+
+#how-it-works .order-processes{
+    width: 100%;
+    height: auto;
+    margin-top: 5.3rem;
+    padding: 0 2rem 0;
+}
+
+#how-it-works .order-processes h2{
+    text-align: center;
+    font-size: clamp(1rem, calc(1vw + 1.2rem), 4rem);
+    font-weight: 600;
+}
+#how-it-works .order-processes .steps{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+    padding-top: 3rem;
+}
+
+#how-it-works .order-processes .steps .step{
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+#how-it-works .order-processes .steps .step h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+#how-it-works .order-processes .steps .step p{
+    text-align: justify;
+    font-size: 1rem;
+    color: lightgray;
+    margin: 0;
+}
+
+#how-it-works .order-processes .steps .empty{
+    width: 2.2rem;
+    height: 0.1rem;
+    background: var(--buttons-color);
+    border-radius: 5px;
+}
+
+#how-it-works .order-processes .steps .step .progress{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background: rgb(224, 108, 65);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+}
+#how-it-works .order-processes .steps .step .progress h3{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+@media  screen and (max-width: 740px) {
+    #how-it-works .order-processes .steps .empty{
+        display: none;
+    }
+    #how-it-works .order-processes .steps{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        row-gap: 3rem;
+    }
+    #how-it-works .order-processes .steps .step{
+        -ms-flex-preferred-size: 400px;
+            flex-basis: 400px;
+        -ms-flex-negative: 3500px;
+            flex-shrink: 3500px;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+    #how-it-works .order-processes .steps .step-2 > .progress{
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 188, 91, 0.936))) ;
+        background: -o-linear-gradient(rgba(240, 188, 91, 0.936)) ;
+        background: linear-gradient(rgba(240, 188, 91, 0.936)) ;
+        color: black;
+    }
+}

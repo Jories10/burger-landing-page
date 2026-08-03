@@ -1,0 +1,137 @@
+
+
+#hero-section{
+    position: relative;
+}
+#hero-section .order-now-form{
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(0, 0, 0, 0.785);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+#hero-section .order-now-form .form-container{
+    width: clamp(22rem, calc(20vw + 10rem), 60rem);
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: 1px solid rgba(242, 168, 142, 0.19);
+    border-radius: 20px;
+    padding: calc(1vw + 1rem);
+    background-color: rgba(117, 37, 8, 0.051);
+    position: relative;
+}
+
+#hero-section .order-now-form .form-container .order-detail h2{
+    margin: 0;
+    font-size: clamp(0.8rem, calc(1vw + 1rem), 1.5rem);
+}
+#hero-section .order-now-form .form-container .order-detail p{
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    color: rgb(195, 194, 194);
+    margin: 0;
+    margin-top: 0.6rem;
+}
+#hero-section .order-now-form .form-container .order-detail  #exit{
+    width: 30px;
+    height: 30px;
+    border: none;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    color: gray;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#hero-section .order-now-form .form-container .order-detail > button:hover{
+    color: white;
+}
+#hero-section .order-now-form .form-container .order-detail > button svg{
+    width: 18px;
+    height: 18px;
+}
+
+#hero-section .order-now-form .form-container #order-form label{
+    display: inline-block;
+    margin-top: 0.8rem;
+    color: rgb(226, 226, 226);
+    font-size: clamp(0.8rem, calc(1vw + 0.5rem), 1rem);
+    font-weight: 400;
+}
+
+#hero-section .order-now-form .form-container #order-form input{
+    display: block;
+    width: 100%;
+    height: 42px;
+    border: 1px solid rgba(242, 168, 142, 0.19);
+    border-radius: 12px;
+    outline: 3px solid transparent;
+    margin-top: 0.5rem;
+    color: white;
+    background-color: transparent;
+}
+#hero-section .order-now-form .form-container #order-form input:focus{
+    outline: 3px solid rgb(255, 98, 0);
+}
+
+#hero-section .order-now-form .form-container #order-form input::-webkit-input-placeholder{
+    color: rgb(198, 198, 198);
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    text-indent: 1rem;
+}
+
+#hero-section .order-now-form .form-container #order-form input::-moz-placeholder{
+    color: rgb(198, 198, 198);
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    text-indent: 1rem;
+}
+
+#hero-section .order-now-form .form-container #order-form input:-ms-input-placeholder{
+    color: rgb(198, 198, 198);
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    text-indent: 1rem;
+}
+
+#hero-section .order-now-form .form-container #order-form input::-ms-input-placeholder{
+    color: rgb(198, 198, 198);
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    text-indent: 1rem;
+}
+
+#hero-section .order-now-form .form-container #order-form input::placeholder{
+    color: rgb(198, 198, 198);
+    font-size: clamp(0.6rem, calc(1vw + 0.5rem), 0.9rem);
+    text-indent: 1rem;
+}
+#hero-section .order-now-form .form-container #order-form > button#confirm-order{
+    width: 100%;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 1.2rem;
+    border: none;
+    background: rgb(255, 119, 0);
+    color: white;
+}
